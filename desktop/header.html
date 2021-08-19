@@ -21,19 +21,19 @@
   {{~#if topic.creator ~}}
   <a href="/users/{{topic.creator.username}}" data-auto-route="true" data-user-card="{{topic.creator.username}}">{{topic.creator.username}}</a> <a href={{topic.url}}>{{format-date topic.createdAt format="tiny"}}</a>
   {{~/if ~}}
-   {{raw "list/action-list" topic=topic postNumbers=topic.liked_post_numbers className="likes" icon="beer"}}
+   {{raw "list/action-list" topic=topic postNumbers=topic.liked_post_numbers className="likes" icon="heart"}}
    </div>
 </td>
 
 {{#if controller.showLikes}}
 <td class="num likes">
-  {{number topic.like_count}} <i class='fas fa-beer'></i>
+  {{number topic.like_count}} <i class='fa fa-heart'></i>
 </td>
 {{/if}}
 
 {{#if controller.showOpLikes}}
 <td class="num likes">
-  {{number topic.op_like_count}} <i class='fas fa-beer'></i>
+  {{number topic.op_like_count}} <i class='fa fa-heart'></i>
 </td>
 {{/if}}
 
